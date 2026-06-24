@@ -1,0 +1,189 @@
+/* Fincore-frontend/src/pages/dashboard/ExtratoDashboard/ExtratoDashboard.module.css */
+
+/* ==========================================================================
+   1. CONTAINER PRINCIPAL E GRID
+   ========================================================================== */
+.extratoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. CARDS E KPIS
+   ========================================================================== */
+.kpiCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chartCard, .tableCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  grid-column: 1 / -1; 
+}
+
+.cardTitle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.cardValue {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   3. GRÁFICOS (ESPAÇOS RESERVADOS)
+   ========================================================================== */
+.chartPlaceholder {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   4. TABELAS E LINHAS INTERATIVAS
+   ========================================================================== */
+.tableContainer {
+  overflow-x: auto; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tag {
+  background-color: var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   5. CABEÇALHO DO DASHBOARD
+   ========================================================================== */
+.headerDashboard {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -0.5rem;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   6. BOTÕES
+   ========================================================================== */
+.btnPrimary {
+  background-color: var(--brand-accent); 
+  color: var(--bg-card);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover { 
+  opacity: 0.8; 
+}
+
+.btnCancel {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnCancel:hover { 
+  opacity: 0.8; 
+}
+
+.btnIcon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btnIcon:hover { 
+  opacity: 1; 
+}
+
+/* ==========================================================================
+   7. MODAIS
+   ========================================================================== */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  color: var(--text-primary);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}

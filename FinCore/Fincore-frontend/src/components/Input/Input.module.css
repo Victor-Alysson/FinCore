@@ -1,0 +1,37 @@
+/* Caminho: Fincore-frontend/src/components/Input/Input.module.css */
+
+/* ==========================================================================
+   1. CONTAINER DO INPUT
+   ========================================================================== */
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   2. ELEMENTO DE CAMPO DE ENTRADA
+   ========================================================================== */
+.inputField {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Estilo de foco (Focus State) para acessibilidade e feedback visual */
+.inputField:focus {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 1px var(--brand-accent);
+}
+
+/* Estilização da sugestão textual (Placeholder) */
+.inputField::placeholder {
+  color: var(--text-secondary);
+}

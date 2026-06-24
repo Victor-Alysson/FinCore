@@ -1,0 +1,61 @@
+/* Fincore-frontend/src/pages/auth/Login/Login.module.css */
+
+/* ==========================================================================
+   1. CONTAINER ESTRUTURAL
+   ========================================================================== */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--bg-main);
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   2. FORMULÁRIO E INTERAÇÕES
+   ========================================================================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerLinks {
+  margin-top: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.linkSecondary {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.linkSecondary:hover {
+  color: var(--text-primary);
+}
+
+.linkAccent {
+  font-size: 0.875rem;
+  color: var(--brand-accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.linkAccent:hover {
+  opacity: 0.8;
+}

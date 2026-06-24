@@ -1,0 +1,46 @@
+/* Caminho: Fincore-frontend/src/components/Header/Header.module.css */
+
+/* ==========================================================================
+   1. CONTAINER ESTRUTURAL DO CABEÇALHO
+   ========================================================================== */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   2. BLOCO DE IDENTIDADE VISUAL (BRAND)
+   ========================================================================== */
+.brandWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Aplicação da cor tema centralizada via Design Token */
+.brandAccent {
+  color: var(--brand-accent);
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--brand-accent);
+  fill: var(--brand-accent);
+}
+
+/* ==========================================================================
+   3. SUBTÍTULO E DESCRIÇÃO
+   ========================================================================== */
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

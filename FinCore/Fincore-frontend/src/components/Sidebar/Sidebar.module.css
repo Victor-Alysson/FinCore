@@ -1,0 +1,158 @@
+/* Fincore-frontend/src/components/Sidebar/Sidebar.module.css */
+
+/* ==========================================================================
+   1. COMPONENTE DROPDOWN (CONTROLE DE ESCOPO)
+   ========================================================================== */
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdownButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.2s ease;
+}
+
+.dropdownButton:hover {
+  border-color: var(--brand-accent);
+}
+
+.seta {
+  transition: transform 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.setaAberta {
+  transform: rotate(180deg);
+  color: var(--brand-accent);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.dropdownOption {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  text-align: left;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dropdownOption:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.opcaoAtiva {
+  color: var(--brand-accent) !important;
+  font-weight: 600 !important;
+  background-color: rgba(0, 240, 255, 0.05) !important;
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO PRINCIPAL (NAVLINKS)
+   ========================================================================== */
+.navContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menuLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   3. RODAPÉ DA SIDEBAR (CONTROLES)
+   ========================================================================== */
+.footerContainer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.footerItem:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Exceção Semântica: Terminar Sessão / Log Out */
+.logout:hover {
+  color: #FF5A5A;
+}

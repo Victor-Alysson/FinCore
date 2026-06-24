@@ -1,0 +1,29 @@
+/* Fincore-frontend/src/components/Button/Button.module.css */
+
+/* ==========================================================================
+   1. ESTILIZAÇÃO DO COMPONENTE BUTTON
+   ========================================================================== */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--brand-accent);
+  color: var(--bg-main);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  
+  /* Definição de transições para feedback visual de interação */
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+/* Feedback visual de hover para indicar interatividade */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Feedback visual de clique (Active State) simulando profundidade via micro-transformação */
+.btn:active {
+  transform: scale(0.98);
+}

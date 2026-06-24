@@ -1,0 +1,291 @@
+/* Fincore-frontend/src/pages/dashboard/Dividas/Dividas.module.css */
+
+/* ==========================================================================
+   1. CONTAINER PRINCIPAL (GRID)
+   ========================================================================== */
+.dividasGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. CARDS E KPIS
+   ========================================================================== */
+.kpiCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.cardValue {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.kpiSub {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   3. GRÁFICOS
+   ========================================================================== */
+.chartsContainer {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.chartCardArea, .chartCardDonut {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.chartPlaceholder {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* ==========================================================================
+   4. TABELA E LINHAS INTERATIVAS
+   ========================================================================== */
+.tableCard {
+  grid-column: 1 / -1;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+}
+
+.table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.rowInterativa {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.rowInterativa:hover td {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Exceção Semântica: Tag indicativa de passivo (Vermelho) */
+.tag {
+  background-color: rgba(255, 90, 90, 0.1);
+  color: #FF5A5A;
+  border: 1px solid rgba(255, 90, 90, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   5. BARRA DE PROGRESSO
+   ========================================================================== */
+.progressContainer {
+  display: block;
+  width: 100%;
+}
+
+.progressHeader {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Exceção Semântica: O progresso de pagamento de dívida é positivo (Verde) */
+.progressBarFill {
+  height: 100%;
+  background: #00FF9D; 
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* ==========================================================================
+   6. BOTÕES
+   ========================================================================== */
+.btnPrimary {
+  background: var(--brand-accent); 
+  color: var(--bg-card);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.8;
+}
+
+.btnCancel {
+  background: var(--border-color);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnCancel:hover {
+  opacity: 0.8;
+}
+
+.btnIcon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 0.25rem;
+}
+
+/* ==========================================================================
+   7. MODAIS E VISUALIZAÇÃO DETALHADA
+   ========================================================================== */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.modalContent input,
+.modalContent select {
+  background: #111114;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.6rem;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.modalContent input:focus,
+.modalContent select:focus {
+  border-color: var(--brand-accent);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Layout Interno do Modal de Detalhes */
+.detalhesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.detalheItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detalheItem strong {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.detalheItem span {
+  font-size: 1rem;
+  color: var(--text-primary);
+}

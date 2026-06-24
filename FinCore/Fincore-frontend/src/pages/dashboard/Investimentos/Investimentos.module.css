@@ -1,0 +1,259 @@
+/* Fincore-frontend/src/pages/dashboard/Investimentos/Investimentos.module.css */
+
+/* ==========================================================================
+   1. CONTAINER PRINCIPAL (GRID)
+   ========================================================================== */
+.investGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. CARDS E KPIS
+   ========================================================================== */
+.kpiCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardValue {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   3. GRÁFICOS (ESPAÇOS RESERVADOS)
+   ========================================================================== */
+.chartsContainer {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.chartCardArea, .chartCardDonut {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.chartPlaceholder {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* ==========================================================================
+   4. TABELAS E LINHAS INTERATIVAS
+   ========================================================================== */
+.tableCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rowInterativa {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.rowInterativa:hover td {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.tag {
+  background-color: rgba(0, 240, 255, 0.1);
+  color: var(--brand-accent);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   5. BOTÕES
+   ========================================================================== */
+.btnPrimary {
+  background: var(--brand-accent);
+  color: var(--bg-card);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.btnCancel {
+  background: var(--border-color);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btnCancel:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   6. MODAIS E VISUALIZAÇÃO DETALHADA
+   ========================================================================== */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modalContent * {
+  box-sizing: border-box;
+}
+
+.modalContent h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.modalContent input, 
+.modalContent select {
+  width: 100% !important;
+  background: #111114;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modalContent input:focus, 
+.modalContent select:focus {
+  border-color: var(--brand-accent);
+}
+
+.modalContent label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.modalContent label span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.detalhesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.detalheItem strong {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.detalheItem span {
+  color: var(--text-primary);
+  font-size: 1rem;
+}

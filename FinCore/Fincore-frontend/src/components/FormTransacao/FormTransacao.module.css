@@ -1,0 +1,96 @@
+/* Fincore-frontend/src/components/FormTransacao/FormTransacao.module.css */
+
+/* ==========================================================================
+   1. LAYOUT DO FORMULÁRIO
+   ========================================================================== */
+.formTransacao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   2. ELEMENTOS DE ENTRADA (INPUTS E SELECTS)
+   ========================================================================== */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.4rem;
+}
+
+.inputGroup label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.inputGroup input,
+.inputGroup select {
+  background-color: #111114; /* Surface terciária para campos de entrada */
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  border-color: var(--brand-accent);
+}
+
+/* Estilização do picker de data nativo para compatibilidade com tema dark */
+.inputGroup input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   3. AÇÕES DO MODAL (BOTÕES)
+   ========================================================================== */
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnPrimary {
+  background-color: var(--brand-accent);
+  color: var(--bg-card);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover { 
+  opacity: 0.8;
+}
+
+.btnCancel {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnCancel:hover { 
+  opacity: 0.8;
+}

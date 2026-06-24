@@ -1,0 +1,47 @@
+/* Fincore-frontend/src/index.css */
+
+/* ==========================================
+   1. DESIGN TOKENS (Variáveis Globais)
+   ========================================== */
+:root {
+  /* Paleta de Fundos (Surfaces) */
+  --bg-main: #121214;
+  --bg-card: #1A1A1E;
+
+  /* Paleta de Delimitação Estrutural (Borders) */
+  --border-color: #2A2A2E;
+
+  /* Paleta Tipográfica (Typography) */
+  --text-primary: #FFFFFF;
+  --text-secondary: #8A8A93;
+
+  /* Paleta de Identidade e Destaque (Brand & Accent) */
+  --brand-accent: #ffae00;
+}
+
+/* ==========================================
+   2. RESET ESTRUTURAL GLOBAL
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Expansão compulsória da árvore do DOM para preenchimento integral do viewport vertical */
+html, body, #root {
+  height: 100%;
+}
+
+/* ==========================================
+   3. TIPOGRAFIA E TEMA GLOBAL
+   ========================================== */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Habilitação de renderização subpixel e suavização de fontes em motores WebKit e Gecko */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
