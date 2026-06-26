@@ -8,7 +8,7 @@ import axios from 'axios';
  * Define a URL base para o ambiente de desenvolvimento local.
  */
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000',
+  baseURL: 'http://localhost:8000',
 });
 
 // ==========================================
